@@ -1,0 +1,22 @@
+plugins {
+  id 'java'
+  id 'application'
+}
+
+repositories {
+  jcenter()
+  maven {
+    url "https://oss.sonatype.org/content/repositories/iovertx-3868/"
+  }
+}
+
+version = '4.0.0.CR1'
+sourceCompatibility = '1.8'
+
+dependencies {
+  compile "io.vertx:vertx-core:$version"
+  compile "io.vertx:vertx-web:$version"
+  compile "io.vertx:vertx-web-openapi:$version"
+}
+
+mainClassName = 'io.vertx.example.HelloWorldEmbedded'
